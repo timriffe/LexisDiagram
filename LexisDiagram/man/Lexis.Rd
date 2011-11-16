@@ -69,8 +69,7 @@ function(ages,years,labs=T,col="black"){
 	}
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
+
 \keyword{hplot}
 \keyword{graphics}
 \keyword{demography}

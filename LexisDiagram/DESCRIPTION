@@ -1,10 +1,10 @@
-Package: EZLex
+Package: LexisDiagram
 Type: Package
-Title: What the package does (short line)
+Title: Draws a quick and easy Lexis Diagram
 Version: 1.0
 Date: 2010-12-17
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Tim Riffe
+Maintainer: Tim Riffe <tim.riffe@gmail.com>
+Description: Produces a nicely labeled Lexis diagram in a graphics device with the specified age and year intervals.
+License: GPL-2
 LazyLoad: yes

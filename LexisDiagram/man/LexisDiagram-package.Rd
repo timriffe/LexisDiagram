@@ -1,18 +1,18 @@
-\name{EZLex-package}
-\alias{EZLex-package}
-\alias{EZLex}
+\name{LexisDiagram-package}
+\alias{LexisDiagram-package}
+\alias{LexisDiagram}
 \docType{package}
 \title{Lexis diagram drawing made easy!}
 \description{
-A funcon for drawing Lexis diagrams (just specify ages and years), plus a triangle highlightin function. 
+A function for drawing Lexis diagrams (just specify ages and years), plus a triangle highlighting function. 
 }
 \details{
 \tabular{ll}{
-Package: \tab EZLex\cr
+Package: \tab LexisDiagram\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
 Date: \tab 2010-12-17\cr
-License: \tab General Public\cr
+License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 }
 Contains two functions: \code{Lexis()} and \code{Thighlight()}, both very straightforward. Try the short examples and you'll get it. Please don't be bashful about suggestions and feedback.

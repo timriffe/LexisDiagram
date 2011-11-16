@@ -11,7 +11,12 @@ function(ages,years,labs=T,col="black"){
 		genx <- max(years)+ .25/interval
 		# year labels don't always fit:
 		x <- years; y <- ages; xn <- length(x); yn <- length(y)
-		windows(width=xrange+2,height=yrange+2)
+		
+		# super-primitive guessing at which graphics device to use
+		A <- try(windows(width=xrange+2,height=yrange+2),silent=T)
+		if (!is.null(A)) A <- try(Quartz(width=xrange+2,height=yrange+2),silent=T)
+		if (!is.null(A)) A <- try(x11(width=xrange+2,height=yrange+2),silent=T)
+		# start plotting
 		par(mai=c(1,1,1,1))
 		plot(NA,type="n",xlim=c(min(x),max(x)),ylim=c(min(y),max(y)),axes=F,xlab="Years",ylab="Age",cex.lab=1.5,asp=1,col=col)
 		segments(x,min(ages),x,max(ages),col=col);segments(min(years),y,max(years),y,col=col)
@@ -26,7 +31,11 @@ function(ages,years,labs=T,col="black"){
 		}
 	}
 	if (labs==F){
-    	windows(width=xrange,height=yrange)
+		# again guessing which device to open
+		A <- try(windows(width=xrange+2,height=yrange+2),silent=T)
+		if (!is.null(A)) A <- try(Quartz(width=xrange+2,height=yrange+2),silent=T)
+		if (!is.null(A)) A <- try(x11(width=xrange+2,height=yrange+2),silent=T)
+		# start plotting
 		par(mai=c(0,0,0,0))
 		x <- years; y <- ages; xn <- length(x); yn <- length(y)
 		plot(NA,type="n",xlim=c(min(x),max(x)),ylim=c(min(y),max(y)),axes=F,xlab="",ylab="",cex.lab=1.5,asp=1,col=col)
