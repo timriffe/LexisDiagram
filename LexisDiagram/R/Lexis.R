@@ -3,13 +3,13 @@ function(ages,
 		years,
 		labs = TRUE,
 		col = "black",
-		open.device = TRUE,
 		mar = c(1,1,1,1),
 		age.lab = "Age",
 		year.lab = "Year",
 		cohort.lab = "Birth Cohort",
 		cex.lab = 1,
-		cex.ax.lab = 1){
+		cex.ax.lab = 1,
+		add = FALSE){
 	xrange <- diff(range(years))
 	yrange <- diff(range(ages))
 	maxrange <- max(c(xrange, yrange))
@@ -17,7 +17,7 @@ function(ages,
 	yrange <- yrange * (5 / maxrange)
 	
 	# open a device if ecessary, set margins
-	if (open.device){
+	if (!add){
 		dev.new(width=xrange+2,height=yrange+2)
 	}
 	# start plotting
