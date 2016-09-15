@@ -17,7 +17,7 @@ Download the [zip ball](https://github.com/timriffe/LexisDiagram/zipball/master)
 # install.packages("devtools")
 
 library(devtools)
-install_github("timriffe/LexisDiagram", subdir = "LexisDiagram")
+install_github("timriffe/LexisDiagram/LexisDiagram")
 ```
 
 **Note**: Windows users need [Rtools](http://cran.r-project.org/bin/windows/Rtools/) to install from github as shown above. Get the most recent version of [R for Windows](http://cran.r-project.org/bin/windows/base/) and download and install the version of Rtools that corresponds to it.
