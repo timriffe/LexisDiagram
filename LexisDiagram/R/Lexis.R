@@ -5,6 +5,7 @@ Lexis <-
 				col = "black",
 				mar = c(1,1,1,1),
 				age.lab = "Age",
+				cohlabels = TRUE,
 				year.lab = "Year",
 				cohort.lab = "Birth Cohort",
 				cex.lab = 1,
@@ -45,10 +46,12 @@ Lexis <-
 			segments(rep(x[i], (xn-1)), y[-yn], rep(x[i + 1], (xn - 1)), y[-1], col = col)
 			axis(1, at = x, labels = x, tick = FALSE, pos = (min(y) - (.1 / interval)), cex = cex.ax.lab)
 			axis(2, at = y, labels = y,tick = FALSE, pos = (min(x)), las = 2, cex = cex.ax.lab)
+			if (cohlabels){
 			for (i in 1:(yn-1)){
 				text(genx, y[i] + 1, labels = (max(x) - y[i] - 1), srt = 45, xpd = TRUE, cex = cex.ax.lab)
 			}
 			text(genx + (.5 / interval), mean(ages), cohort.lab, srt = 270, cex = cex.lab, xpd = TRUE)
+		}
 		}
 	} else {
 		x <- years; y <- ages; xn <- length(x); yn <- length(y)
